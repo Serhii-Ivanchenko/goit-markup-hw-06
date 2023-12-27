@@ -585,6 +585,12 @@ address {
   padding: 96px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 100px 108px;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .footer {
     padding: 100px 0;
@@ -595,18 +601,31 @@ address {
   display: flex;
   flex-direction: column;
   row-gap: 72px;
-  /* align-items: baseline; */
 }
 
 @media screen and (min-width: 768px) {
   .footer-container {
     flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    align-items: baseline;
   }
 }
 
 .footer-wrapper {
-  /* margin-right: 120px; */
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-wrapper {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-wrapper {
+    margin-right: 120px;
+  }
 }
 
 .footer .logo {
@@ -654,9 +673,12 @@ address {
 
 .footer-socials-wrapper {}
 
-.subscribe {
-  /* margin-left: auto; */
+@media screen and (min-width: 768px) {
+  .subscribe {
+    margin-left: auto;
+  }
 }
+
 
 .subscribe-title {
   color: #fff;
@@ -681,7 +703,7 @@ address {
 @media screen and (min-width: 768px) {
   .subscribe-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 24px;
   }
@@ -708,6 +730,13 @@ address {
   letter-spacing: 0.04em;
   color: #fff;
 }
+
+@media screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 264px;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .subscribe-input {
     width: 264px;
