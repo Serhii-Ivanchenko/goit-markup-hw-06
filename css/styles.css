@@ -87,7 +87,7 @@ h2 {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -114,18 +114,30 @@ img {
 .nav {
   display: flex;
   align-items: center;
+  gap: 120px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .nav {
+    gap: 76px;
+  }
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
 }
 
 .nav-item {}
 
 .logo {
-  margin-right: 76px;
   font-family: 'Raleway', sans-serif;
   color: #4d5ae5;
   font-size: 18px;
@@ -154,7 +166,6 @@ img {
   .burger-btn {
     display: none;
   }
-
 }
 
 .nav-link {
@@ -196,11 +207,20 @@ address {
 }
 
 .address-list {
-  display: flex;
+  display: none;
 }
-
-.address-item:not(:last-child) {
-  margin-right: 40px;
+@media only screen and (min-width: 768px) {
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 
 .address-link {
@@ -526,24 +546,19 @@ address {
 .portfolio-list {
   display: flex;
   flex-direction: column;
-  row-gap: 48px;
+  gap: 48px 24px;
 }
 
 @media screen and (min-width: 768px) {
   .portfolio-list {
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 72px;
-    column-gap: 24px;
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 768px) and (max-width: 1158px) {
   .portfolio-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
+    gap: 72px 24px;
   }
 }
 
@@ -604,6 +619,15 @@ address {
 
 .portfolio-item .item-title {
   margin-bottom: 8px;
+  color: var(--NAVY-BLUE, #2E2F42);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-text {
+  font-weight: 400;
 }
 
 /* #endregion */
@@ -702,7 +726,7 @@ address {
 
 .footer-socials-wrapper {}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1158px) {
   .subscribe {
     margin-left: auto;
   }
@@ -1141,7 +1165,8 @@ address {
   letter-spacing: 0.02em;
 }
 
-.menu-nav-link:hover, .menu-nav-link:focus,
+.menu-nav-link:hover,
+.menu-nav-link:focus,
 .menu-contacts-link:hover,
 .menu-contacts-link:focus {
   color: #404bbf;
@@ -1152,7 +1177,9 @@ address {
   gap: 40px;
   align-items: center;
 }
-.menu-socials > .socials-item {
+
+.menu-socials>.socials-item {
   flex-shrink: 0;
 }
+
 /* #endregion */
