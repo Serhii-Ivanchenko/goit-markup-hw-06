@@ -675,7 +675,7 @@ address {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1158px) {
   .footer-wrapper {
     margin-right: 120px;
   }
@@ -851,6 +851,7 @@ address {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
+  overflow-y: scroll;
 }
 
 .modal {
@@ -1112,6 +1113,7 @@ address {
 
 .mobile-menu.is-open {
   transform: translateX(0);
+  overflow-y: scroll;
 }
 
 .menu-close-btn {
