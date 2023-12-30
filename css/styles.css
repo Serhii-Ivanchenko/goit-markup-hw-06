@@ -58,6 +58,7 @@ button {
   border: none;
 }
 
+
 ul,
 ol {
   list-style-type: none;
@@ -109,6 +110,12 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-container {
+    padding: 0 16px;
+  }
 }
 
 .nav {
@@ -209,6 +216,7 @@ address {
 .address-list {
   display: none;
 }
+
 @media only screen and (min-width: 768px) {
   .address-list {
     display: flex;
@@ -216,6 +224,7 @@ address {
     gap: 12px;
   }
 }
+
 @media only screen and (min-width: 1158px) {
   .address-list {
     flex-direction: row;
@@ -349,6 +358,17 @@ address {
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+
+@media (hover: hover) {
+  .hero-button:hover {
+    background-color: #404bbf;
+  }
+}
+
+@media not (hover: hover) {
+  .hero-button:active{
+  background-color: #404bbf;}
 }
 
 /* #endregion */
@@ -565,6 +585,11 @@ address {
 .portfolio-item {
   width: 100%;
 }
+@media only screen and (max-width: 1157.98px) {
+  .portfolio-item {
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  }
+}
 
 @media screen and (min-width: 768px) {
   .portfolio-item {
@@ -640,7 +665,7 @@ address {
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 100px 108px;
+    padding: 100px 92px;
   }
 }
 
@@ -661,6 +686,15 @@ address {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0;
     align-items: baseline;
   }
 }
@@ -827,7 +861,18 @@ address {
 .subscribe-button:hover,
 .subscribe-button:focus {
   background-color: #404bbf;
-  /* outline: transparent; */
+}
+
+@media (hover: hover) {
+  .subscribe-button:hover {
+    background-color: #404bbf;
+  }
+}
+
+@media not (hover: hover) {
+  .subscribe-button:active {
+    background-color: #404bbf;
+  }
 }
 
 /* #endregion */
@@ -864,7 +909,7 @@ address {
   max-width: 408px;
   width: calc(100% - 32px);
   min-height: 584px;
-  padding: 16px;
+  padding: 0 16px 24px;
   padding-top: 72px;
   border-radius: 4px;
   background: #fcfcfc;
@@ -1102,6 +1147,7 @@ address {
   padding: 72px 16px 40px 16px;
   background-color: #fff;
   transform: translateX(-100%);
+  visibility: hidden;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
@@ -1114,6 +1160,7 @@ address {
 .mobile-menu.is-open {
   transform: translateX(0);
   overflow-y: scroll;
+  visibility: visible;
 }
 
 .menu-close-btn {
@@ -1156,7 +1203,7 @@ address {
   gap: 48px;
 }
 
-.menu-contacts-item {
+.menu-contacts-item:not(:last-child) {
   margin-bottom: 24px;
 }
 
